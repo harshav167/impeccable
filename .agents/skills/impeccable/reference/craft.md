@@ -124,7 +124,15 @@ Implement the feature following the design brief. Build in passes so structure, 
 
 ## Step 6: Browser-Based Iteration
 
-**This step is critical.** Open the result in a browser and look at it. In Codex, use browser-use or equivalent; otherwise use Playwright or ask the user for screenshots. Inspect screenshots, not just DOM or terminal output.
+**This step is critical.** Open the result in a browser and look at it. In Codex, use browser-use or equivalent; otherwise use Playwright or ask the user for screenshots.
+
+**Capturing a screenshot is not inspecting it.** A `browser_screenshot` call returns a file path; until you Read that file back into the conversation, the model has not seen the rendered page. Skipping the Read makes this step a checkbox, not an inspection. The pattern is:
+
+1. Take the screenshot (`browser_screenshot` or equivalent).
+2. **Read the resulting PNG file** so its image content enters the conversation as multimodal input.
+3. Critique what you actually see in the image. Reference specific elements: "the hero CTA looks misaligned at this width," "the trace section has too much whitespace above," etc. If your critique could have been written without looking at the image, you didn't look at the image.
+
+Do this for each viewport you screenshot. Do not declare a viewport inspected without a Read of the image.
 
 Detector or QA output is defect evidence only. A clean detector, empty array, or script pass never means the design is strong. Do not cite clean automated checks as proof that the work is finished.
 
