@@ -95,9 +95,11 @@ function generateCounts(rootDir, skills, buildDir) {
       }
     }
 
-    // Check for stale detection counts
+    // Check for stale detection counts. Use the changelog-stripped content
+    // so historical counts in changelog entries (e.g. "28 rules" from an
+    // older release) don't flag against the current detector total.
     const detectPattern = /\b(\d+)\s+(deterministic\s+)?(checks|patterns|rules|detections)/gi;
-    for (const match of content.matchAll(detectPattern)) {
+    for (const match of strippedContent.matchAll(detectPattern)) {
       const num = parseInt(match[1]);
       if (num !== detectionCount && num > 10) { // ignore small numbers like "3 patterns"
         console.error(`  ❌ ${relPath}: found "${match[0]}" but detection count is ${detectionCount}`);
