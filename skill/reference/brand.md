@@ -12,6 +12,8 @@ Brand isn't a neutral register. AI-generated landing pages have flooded the inte
 
 **The second slop test: aesthetic lane.** Before committing to moves, name the reference. A Klim-style specimen page is one lane; Stripe-minimal is another; Liquid-Death-acid-maximalism is another. Don't drift into editorial-magazine aesthetics on a brief that isn't editorial. A hiking brand with Cormorant italic drop caps has the wrong register within the register.
 
+Then the inverse test: in one sentence, describe what you're about to build the way a competitor would describe theirs. If that sentence fits the modal landing page in the category, restart.
+
 ## Typography
 
 ### Font selection procedure
@@ -66,6 +68,7 @@ Brand surfaces have permission for Committed, Full palette, and Drenched strateg
 - Palette IS voice. A calm brand and a restless brand should not share palette mechanics.
 - When the strategy is Committed or Drenched, color carries the brand. Don't hedge with neutrals around the edges. Commit.
 - Don't converge across projects. If the last brand surface was restrained-on-cream, this one is not.
+- When a cultural-symbol palette is the obvious pull, reach past it. Let the cultural reading come from typography, imagery, and copy, not the palette.
 
 ## Layout
 
